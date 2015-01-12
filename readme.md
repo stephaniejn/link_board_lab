@@ -25,11 +25,11 @@ For today we're going focus on `Users` and `Posts` only. The goal for tonight is
 
 | Verb | Route | Action | Purpose |
 |------|-------|------------|--------|---|
-| GET | /signup | user#new | render user sign up form | 
-| POST | /signup | user#create | create user in database (signup) | 
-| GET | /login | session#new | render user log in form |
-| POST | /login | session#create | create user session (login) |
-| GET / DELETE | /logout | session#destroy | destroy user session (logout) |
+| GET | /signup | users#new | render user sign up form | 
+| POST | /signup | users#create | create user in database (signup) | 
+| GET | /login | sessions#new | render user log in form |
+| POST | /login | sessions#create | create user session (login) |
+| GET / DELETE | /logout | sessions#destroy | destroy user session (logout) |
 
 
 ###Post
