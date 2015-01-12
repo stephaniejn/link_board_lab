@@ -5,24 +5,6 @@ We are going to create a clone of [hacker news](https://news.ycombinator.com/). 
 For today we're going focus on `Users` and `Posts` only. The goal for tonight is to create an app that allows users to sign up, login, and add posts (no comments or voting yet).
 
 
-##Getting started
-
-* Fork / clone
-* cd to cloned repo
-* create new rails app `rails new ./ -T`
-* Create `User` model
-* Create authentication routes / views / actions
-* Create `Post` model
-* Create crud routes / views / actions for `Post`
-* Add validations
-    * post.title - should be between 10 and 255 chars
-    * post.link - should be a valid url
-    * user.email - should be a valid email
-    * user.name - should be required
- 
-
-
-
 ##Models
 
 ####User
@@ -53,7 +35,38 @@ For today we're going focus on `Users` and `Posts` only. The goal for tonight is
 ###Post
 Create full CRUD routes.
 
+##Validations
+
+* post.title
+    * required
+    * should be between 10 and 100 chars
+* post.link
+    * required
+    * should be a valid url
+* user.email
+    * required
+    * valid email
+    * unique
+* user.name
+    * required
+    * less than 20 chars
 
 
 
+##Getting started
+
+* Fork / clone
+* cd to cloned repo
+* create new rails app `rails new ./ -T`
+* test `rails s` go to localhost:3000 in browser
+* Create `User` model (with `has_secure_password`)
+* enable bcrypt gem in Gemfile
+* migrate `rake db:migrate`
+* test `rails c` User.create... etc...
+* Create authentication routes / views / actions
+* Create `Post` model
+* migrate `rake db:migrate`
+* test `rails c` Post.create... etc...
+* Create crud routes / views / actions for `Post`
+* Add validations
 
