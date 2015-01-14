@@ -1,0 +1,34 @@
+<div class="col-md-8 col-md-offset-2">
+<h1>Soccer posts</h1>
+<br>
+
+<p>
+
+<table class="table">
+  <tr>
+    <th>Title</th>
+    <th>Link</th>
+  </tr>
+
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.link %></td>
+      <td> <%= link_to 'Show post', post, :class=>'btn btn-primary'%></td>
+      <td><%= link_to 'Destroy', post, :class=>'btn btn-primary',
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Edit', edit_post_path(post), :class=>'btn btn-primary' %></td>
+    </tr>
+    </tr>
+  <% end %>
+</table>
+
+</p>
+
+<%= link_to 'Add New post', new_post_path %>
+
+</div>
+</div>
+</div>
+
